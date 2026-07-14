@@ -156,12 +156,3 @@ category_encoders pipelines are version-sensitive when unpickled.
 
 ---
 
-## 📄 License
-
-This project currently has no license file. Add one (e.g., MIT) if you'd like to make reuse terms explicit.
-
----
-
-## 🙋‍♂️ Author
-
-**[Optimus0205](https://github.com/Optimus0205)**
