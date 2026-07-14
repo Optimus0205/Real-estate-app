@@ -1,25 +1,61 @@
+<div align="center">
+
 # 🏡 Gurgaon Real Estate
 
-A multi-page **Streamlit** web app for exploring, analyzing, and predicting residential property prices in Gurgaon. Built end-to-end — from a trained ML pricing pipeline to interactive geographic analytics and a content-based apartment recommender.
+### Predict prices. Explore the market. Discover your next home.
 
-**🔗 Live app:** [gurgaonreal-estate.streamlit.app](https://gurgaonreal-estate.streamlit.app)
+A multi-page **Streamlit** web app that combines machine learning, interactive analytics, and a content-based recommendation engine to make sense of Gurgaon's residential real estate market.
+
+[![Streamlit App](https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://gurgaonreal-estate.streamlit.app)
+[![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML%20Pipeline-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)](https://scikit-learn.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+**[🚀 Try the Live App](https://gurgaonreal-estate.streamlit.app)**
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Project Structure](#️-project-structure)
+- [Getting Started](#-getting-started-locally)
+- [Tech Stack](#️-tech-stack)
+- [Notes](#-notes)
+- [License](#-license)
+- [Author](#️-author)
 
 ---
 
 ## ✨ Features
 
+<table>
+<tr>
+<td width="33%" valign="top">
+
 ### 💰 Price Predictor
-Estimate the price of a property by entering details like property type, sector, number of bedrooms/bathrooms, balconies, built-up area, furnishing status, and more. Powered by a trained `scikit-learn` regression pipeline (with categorical encoding via `category_encoders`).
+Get an instant price estimate for a property by entering details like property type, sector, bedrooms, bathrooms, balconies, built-up area, and furnishing status — powered by a trained `scikit-learn` regression pipeline with categorical encoding via `category_encoders`.
+
+</td>
+<td width="33%" valign="top">
 
 ### 📊 Analytics Dashboard
-Explore Gurgaon's real estate market visually:
-- **Geographic price map** — sector-wise average price per sqft plotted on an interactive map (Plotly + Mapbox)
-- **Word clouds** of frequently mentioned property features
-- **Distribution plots** comparing prices across flats vs. independent houses
-- Additional visual breakdowns using `matplotlib` and `seaborn`
+Explore the market visually:
+- 🗺️ Interactive **sector-wise price map**
+- ☁️ **Word clouds** of top property features
+- 📈 **Distribution plots** comparing flats vs. independent houses
+
+</td>
+<td width="33%" valign="top">
 
 ### 🏘️ Apartment Recommender
-Get similar apartment recommendations based on a chosen property, using a **cosine-similarity** based content recommendation engine built on location, pricing, and feature-similarity matrices.
+Discover similar apartments using a **cosine-similarity** based content recommendation engine built on location, pricing, and feature-similarity matrices.
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -52,11 +88,13 @@ git clone https://github.com/Optimus0205/Real-estate-app.git
 cd Real-estate-app
 ```
 
-**2. Create a virtual environment (recommended)**
+**2. Create a virtual environment** *(recommended)*
 ```bash
 python -m venv .venv
+
 # Windows
 .venv\Scripts\activate
+
 # macOS/Linux
 source .venv/bin/activate
 ```
@@ -71,26 +109,50 @@ pip install -r requirements.txt
 streamlit run Home.py
 ```
 
-The app will open automatically in your browser at `http://localhost:8501`.
+The app will open automatically at `http://localhost:8501` 🎉
 
 ---
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
 | Category | Tools |
-|---|---|
-| App Framework | [Streamlit](https://streamlit.io/) |
-| Data Handling | pandas, numpy |
-| Machine Learning | scikit-learn, category_encoders |
-| Visualization | Plotly, Matplotlib, Seaborn, WordCloud |
-| Statistics | statsmodels |
+|:---|:---|
+| **App Framework** | ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) |
+| **Data Handling** | ![pandas](https://img.shields.io/badge/-pandas-150458?style=flat-square&logo=pandas&logoColor=white) ![numpy](https://img.shields.io/badge/-numpy-013243?style=flat-square&logo=numpy&logoColor=white) |
+| **Machine Learning** | ![scikit-learn](https://img.shields.io/badge/-scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white) `category_encoders` |
+| **Visualization** | ![Plotly](https://img.shields.io/badge/-Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white) `Matplotlib` `Seaborn` `WordCloud` |
+| **Statistics** | `statsmodels` |
+
+</div>
 
 ---
 
 ## 📌 Notes
 
-- The prediction pipeline (`pipeline.pkl.gz`) and datasets are pre-trained/precomputed artifacts — no training step is needed to run the app.
-- If you retrain the model, make sure to keep `requirements.txt` versions in sync with the environment used for training, since scikit-learn and category_encoders pipelines are version-sensitive when unpickled.
+> **Pre-trained artifacts**: The prediction pipeline (`pipeline.pkl.gz`) and datasets are pre-trained/precomputed — no training step is needed to run the app.
+
+> **Version sensitivity**: If you retrain the model, keep `requirements.txt` versions in sync with the training environment. scikit-learn and category_encoders pipelines are version-sensitive when unpickled, and mismatches can break the deployed app.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+
+## 🙋‍♂️ Author
+
+**[Optimus0205](https://github.com/Optimus0205)**
+
+⭐ If you found this project useful, consider giving it a star!
+
+</div>
+category_encoders pipelines are version-sensitive when unpickled.
 
 ---
 
